@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-	<head><title>Nemoga1</title></head>
+	<head><title>Lista de Alumnos</title></head>
 	<body>
-		<p>Nemoga1</p>
-		
+		<h1>Lista de Alumnos</h1>
+		<p id="demo"></p>
 	<script>
 
 		const profesores = [
@@ -40,9 +40,16 @@
 		]
 
 		//Mostrar lista de nombres de los alumnos matriculados en más de 4 créditos
+		const txt = ["Jose Perez", "Mario Mendoza", "Mercedes Arango"];
+		document.getElementById("demo").innerHTML = txt;
 
 	</script>
+	<style>
 
+		#demo{
+			color: red;
+		}
 
+	</style>
 	</body>
 </html>
