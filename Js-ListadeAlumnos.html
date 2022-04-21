@@ -40,7 +40,121 @@
 		]
 
 		//Mostrar lista de nombres de los alumnos matriculados en más de 4 créditos
-		const txt = ["Jose Perez", "Mario Mendoza", "Mercedes Arango"];
+
+		let al1 = 0, al2 = 0, al3 = 0, al4 = 0;
+
+		for (var i = 0; i < matriculas.length; i++){
+			if(matriculas[i].alumnoId == 1){
+ 				if(matriculas[i].cursoId == 1){
+					al1 += 3
+				}
+				else if(matriculas[i].cursoId == 2){
+					al1 += 2
+				}
+				else if(matriculas[i].cursoId == 3){
+					al1 += 4
+				}
+				else if(matriculas[i].cursoId == 4){
+					al1 += 4
+				}
+				else if(matriculas[i].cursoId == 5){
+					al1 += 2
+				} 
+				//analize(matriculas, al1)
+			}
+			if(matriculas[i].alumnoId == 2){
+ 				if(matriculas[i].cursoId == 1){
+					al2 += 3
+				}
+				else if(matriculas[i].cursoId == 2){
+					al2 += 2
+				}
+				else if(matriculas[i].cursoId == 3){
+					al2 += 4
+				}
+				else if(matriculas[i].cursoId == 4){
+					al2 += 4
+				}
+				else if(matriculas[i].cursoId == 5){
+					al2 += 2
+				} 
+				//analize(matriculas, al1)
+			}
+			if(matriculas[i].alumnoId == 3){
+ 				if(matriculas[i].cursoId == 1){
+					al3+= 3
+				}
+				else if(matriculas[i].cursoId == 2){
+					al3+= 2
+				}
+				else if(matriculas[i].cursoId == 3){
+					al3+= 4
+				}
+				else if(matriculas[i].cursoId == 4){
+					al3+= 4
+				}
+				else if(matriculas[i].cursoId == 5){
+					al3+= 2
+				} 
+				//analize(matriculas, al1)
+			}
+			if(matriculas[i].alumnoId == 4){
+ 				if(matriculas[i].cursoId == 1){
+					al4 += 3
+				}
+				else if(matriculas[i].cursoId == 2){
+					al4 += 2
+				}
+				else if(matriculas[i].cursoId == 3){
+					al4 += 4
+				}
+				else if(matriculas[i].cursoId == 4){
+					al4 += 4
+				}
+				else if(matriculas[i].cursoId == 5){
+					al4 += 2
+				} 
+				//analize(matriculas, al1)
+			}		
+		}
+		console.log("el numero de creditos de Raul Granados es "+al1)
+		console.log("el numero de creditos de Juan Dinamo es "+al2)
+		console.log("el numero de creditos de Mercedes Arango es "+al3)
+		console.log("el numero de creditos de Aaron Alvarado es "+al4)
+
+/* 		function analize(mat, al){
+			if(mat[i].cursoId == 1){
+					al += 3
+			}
+			else if(mat[i].cursoId == 2){
+				al += 2
+			}
+			else if(mat[i].cursoId == 3){
+				al += 4
+			}
+			else if(mat[i].cursoId == 4){
+				al += 4
+			}
+			else if(mat[i].cursoId == 5){
+				al += 2
+			}
+		} */
+
+		let txt = [];
+
+		if(al1 > 4){
+			txt.push("Raul Granados")
+		} 
+		if(al2 > 4){
+			txt.push("Juan Dinamo")
+		} 
+		if(al3 > 4){
+			txt.push("Mercedes Arango")
+		}
+		if(al4 > 4){
+			txt.push("Aaron Alvarado")
+		}
+
 		document.getElementById("demo").innerHTML = txt;
 
 	</script>
