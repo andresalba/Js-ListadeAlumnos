@@ -122,37 +122,19 @@
 		console.log("el numero de creditos de Mercedes Arango es "+al3)
 		console.log("el numero de creditos de Aaron Alvarado es "+al4)
 
-/* 		function analize(mat, al){
-			if(mat[i].cursoId == 1){
-					al += 3
-			}
-			else if(mat[i].cursoId == 2){
-				al += 2
-			}
-			else if(mat[i].cursoId == 3){
-				al += 4
-			}
-			else if(mat[i].cursoId == 4){
-				al += 4
-			}
-			else if(mat[i].cursoId == 5){
-				al += 2
-			}
-		} */
-
 		let txt = [];
 
 		if(al1 > 4){
-			txt.push("Raul Granados")
+			txt.push(alumnos[0].name)
 		} 
 		if(al2 > 4){
-			txt.push("Juan Dinamo")
+			txt.push(alumnos[1].name)
 		} 
 		if(al3 > 4){
-			txt.push("Mercedes Arango")
+			txt.push(alumnos[2].name)
 		}
 		if(al4 > 4){
-			txt.push("Aaron Alvarado")
+			txt.push(alumnos[3].name)
 		}
 
 		document.getElementById("demo").innerHTML = txt;
