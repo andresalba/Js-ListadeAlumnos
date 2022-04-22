@@ -41,97 +41,25 @@
 
 		//Mostrar lista de nombres de los alumnos matriculados en más de 4 créditos
 
-		let al1 = 0, al2 = 0, al3 = 0, al4 = 0;
+		let al = Array(alumnos.length).fill(0);
+		const  creditosPorListar = 3;
 
-		for (var i = 0; i < matriculas.length; i++){
-			if(matriculas[i].alumnoId == 1){
- 				if(matriculas[i].cursoId == 1){
-					al1 += cursos[0].creditos
+		for(let i=0; i< matriculas.length; i++){
+			console.log(al)
+			for(let j=0; j< cursos.length; j++){
+				if(cursos[j].id == matriculas[i].cursoId){
+					al[matriculas[i].alumnoId - 1]+=cursos[j].creditos 
 				}
-				else if(matriculas[i].cursoId == 2){
-					al1 += cursos[1].creditos
-				}
-				else if(matriculas[i].cursoId == 3){
-					al1 += cursos[2].creditos
-				}
-				else if(matriculas[i].cursoId == 4){
-					al1 += cursos[3].creditos
-				}
-				else if(matriculas[i].cursoId == 5){
-					al1 += cursos[4].creditos
-				} 
 			}
-			if(matriculas[i].alumnoId == 2){
-				if(matriculas[i].cursoId == 1){
-					al2 += cursos[0].creditos
-				}
-				else if(matriculas[i].cursoId == 2){
-					al2 += cursos[1].creditos
-				}
-				else if(matriculas[i].cursoId == 3){
-					al2 += cursos[2].creditos
-				}
-				else if(matriculas[i].cursoId == 4){
-					al2 += cursos[3].creditos
-				}
-				else if(matriculas[i].cursoId == 5){
-					al2 += cursos[4].creditos
-				} 
-			}
-			if(matriculas[i].alumnoId == 3){
-				if(matriculas[i].cursoId == 1){
-					al3 += cursos[0].creditos
-				}
-				else if(matriculas[i].cursoId == 2){
-					al3 += cursos[1].creditos
-				}
-				else if(matriculas[i].cursoId == 3){
-					al3 += cursos[2].creditos
-				}
-				else if(matriculas[i].cursoId == 4){
-					al3 += cursos[3].creditos
-				}
-				else if(matriculas[i].cursoId == 5){
-					al3 += cursos[4].creditos
-				} 
-			}
-			if(matriculas[i].alumnoId == 4){
-				if(matriculas[i].cursoId == 1){
-					al4 += cursos[0].creditos
-				}
-				else if(matriculas[i].cursoId == 2){
-					al4 += cursos[1].creditos
-				}
-				else if(matriculas[i].cursoId == 3){
-					al4 += cursos[2].creditos
-				}
-				else if(matriculas[i].cursoId == 4){
-					al4 += cursos[3].creditos
-				}
-				else if(matriculas[i].cursoId == 5){
-					al4 += cursos[4].creditos
-				} 
-			}	
 		}
-		console.log("el numero de creditos de Raul Granados es "+al1)
-		console.log("el numero de creditos de Juan Dinamo es "+al2)
-		console.log("el numero de creditos de Mercedes Arango es "+al3)
-		console.log("el numero de creditos de Aaron Alvarado es "+al4)
+		console.log(al)
 
 		let txt = [];
-		let  creditosPorListar = 4;
 
-		if(al1 > creditosPorListar){
-			txt.push(alumnos[0].name)
-		} 
-		if(al2 > creditosPorListar){
-			txt.push(alumnos[1].name)
-		} 
-		if(al3 > creditosPorListar){
-			txt.push(alumnos[2].name)
-		}
-		if(al4 > creditosPorListar){
-			txt.push(alumnos[3].name)
+		for(let w=0; w<al.length; w++){
+			if(al[w]>creditosPorListar){
+				txt.push(alumnos[w].name)
+			}
 		}
 
 		document.getElementById("demo").innerHTML = txt;
